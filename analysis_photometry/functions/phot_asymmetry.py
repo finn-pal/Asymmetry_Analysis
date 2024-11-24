@@ -68,7 +68,7 @@ def noise_correction(noise_it, mask, image, centre_asym, gal_image):
 
     # loop that creates an asymmetry value for the noise that can later be subtracted from the measured value
 
-    for i in range(noise_it):
+    for _ in range(noise_it):
         np.random.shuffle(noise)  # Randomly shuffles nosie in selection 'bucket' (i.e. array 'noise')
         noise_data = gal_mask.copy()  # Array to be filled and replaced
 
